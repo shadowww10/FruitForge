@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FruitForge — Roblox Trading Hub</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<header class="nav">
+  <button id="chatBtn" class="iconBtn" title="Chat">💬</button>
+  <a class="brand" href="/">Fruit<span>Forge</span></a>
+  <div class="navRight">
+    <button id="reportTop" class="iconBtn" title="Report">⚠</button>
+    <button id="modBtn" class="iconBtn hidden" title="Moderator">🛡️</button>
+    <button id="createBtn" class="primary">＋ Create Ad</button>
+    <button id="profileBtn" class="profileBtn">👤</button>
+  </div>
+</header>
+
+<main>
+<div id="announcement" class="announcement hidden"></div>
+<div id="loginNotice" class="loginNotice hidden"></div>
+<section id="hero" class="hero">
+  <div class="badge">ROBLOX • BLOX FRUITS</div>
+  <h1>Hello, welcome to <span>FruitForge.</span></h1>
+  <p>The ultimate Roblox trading hub with live chat. Browse trade ads, show what you have, say what you want, and connect directly with other traders.</p>
+  <div class="heroActions">
+    <button class="google login" data-provider="google">Continue with Google</button>
+    <button class="roblox login" data-provider="roblox">Continue with Roblox</button>
+  </div>
+  <p class="small">You can browse without an account. Login is required to post ads or start chats.</p>
+</section>
+
+<section class="toolbar">
+  <input id="search" placeholder="Search trades, fruits or items…">
+  <button id="allFilter" class="filter active">All trades</button>
+  <button id="userSearchBtn" class="filter">Search Users</button>
+</section>
+
+<section id="feed" class="feed"></section>
+<div id="empty" class="empty hidden">No ads yet. Be the first trader to post one.</div>
+<div id="sentinel"></div>
+</main>
+
+<div id="modal" class="modal hidden"></div>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
